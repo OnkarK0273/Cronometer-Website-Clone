@@ -1,20 +1,37 @@
 import React from 'react'
 import {data1,data2,habit,habitdes,nutrition,nutritiondes} from '../Data/Data'
-import Navbar from '../Components/Navbar'
-import Playstore from '../Components/Playstore'
-import Poster1 from '../Components/Poster1'
-import Headingname from '../Components/Headingname'
-import Habitgrid from '../Components/Habitgrid'
-import Nutriction from '../Components/Nutriction'
-import Syncapp from '../Components/Syncapp'
-import Review from '../Components/Review'
-import Footer from '../Components/Footer'
+import Navbar from '../Components/HomePage/Navbar'
+import Playstore from '../Components/HomePage/Playstore'
+import Poster1 from '../Components/HomePage/Poster1'
+import Headingname from '../Components/HomePage/Headingname'
+import Habitgrid from '../Components/HomePage/Habitgrid'
+import Nutriction from '../Components/HomePage/Nutriction'
+import Syncapp from '../Components/HomePage/Syncapp'
+import Review from '../Components/HomePage/Review'
+import Footer from '../Components/HomePage/Footer'
+import {
+  Box,
+  Container,
+  Flex,
+  Image,
+  Link,
+  SimpleGrid,
+  Stack,
+  Text,
+  useColorModeValue,
+  chakra,
+  VisuallyHidden,
+  Heading,
+} from '@chakra-ui/react';
 
 function Home() {
   console.log(data1)
   return (
     <div>
         <Navbar/>
+        <Box position={"absolute"} right="35px" zIndex={-1} >
+            <Image src="/images/dotbg.png"/>
+        </Box>
         <Poster1/>
         <Playstore/>
         <Headingname h1={habit} h2={habitdes}/>
