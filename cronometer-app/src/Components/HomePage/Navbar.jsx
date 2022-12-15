@@ -20,7 +20,7 @@ import {
   Image,
 } from '@chakra-ui/react';
 import { ChevronDownIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
-
+import { NavLink } from 'react-router-dom';
 
 
 export default function Navbar() {
@@ -35,8 +35,8 @@ export default function Navbar() {
           <Flex alignItems={'center'}  >
 
             <Stack direction={'row'} >
-                <Image src="/images/logo.png" w="63px"/>
-                <Text fontSize={35} fontWeight="bold">Cronometer</Text>
+              <NavLink  to='/'> <Image src="/images/logo.png" w="63px"/></NavLink>
+              <NavLink  to='/'><Text fontSize={35} fontWeight="bold">Cronometer</Text></NavLink>  
             </Stack>
 
             <Stack direction={'row'} spacing={10} border="0px" alignItems={'center'} pl="20px" >
@@ -84,7 +84,8 @@ export default function Navbar() {
                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
               </Button>
               <Button colorScheme='teal' variant='outline' >
-                SignUp
+                <NavLink  to='/Signup'>SignUp</NavLink>
+                
               </Button>
             </Stack>
           </Flex>
