@@ -23,8 +23,6 @@ export default function Signup() {
         </Box>
         <Box p="30px"><Heading>Create Your Free Account</Heading></Box>
         <Email/>
-        
-        
     </>
   )
 }
