@@ -3,7 +3,7 @@ import { Box, Flex, Heading} from "@chakra-ui/react";
 export default function Display({data}) {
   return (
     <>
-        <Box border="1px" mt="10px">
+        <Box  mt="10px" p="10px" boxShadow='base'  rounded='md' bg='green.100' >
             <Heading p="5px" >Foods</Heading>
             <hr />
             <Flex textAlign={'left'} rowGap={3} p="5px" flexDirection={'column'}  >
