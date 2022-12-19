@@ -1,4 +1,6 @@
 import React from 'react'
+import { Authcontext } from '../../Context/Auth'
+import { Navigate } from 'react-router-dom'
 import {
     FormControl,
     FormLabel,
@@ -21,8 +23,11 @@ import {
 
 
 
+
 export default function Email() {
-   
+  const{Auth,login}= React.useContext(Authcontext) 
+
+ 
 
     const [user,setuser] = React.useState({
         email:"",
@@ -35,6 +40,10 @@ export default function Email() {
         height:null,
         weight:null
     })
+    if(Auth.isAuth){
+        return <Navigate to='/Dashboard'/>  
+    }
+    console.log(Auth)
 
     const {email,password,confirmpassword,day,month,year,weight,height} = user
 
@@ -46,9 +55,7 @@ export default function Email() {
     }
 
     const submit = () =>{
-        console.log(user)
-       
-      
+        login(user)
     }
 
 

@@ -1,0 +1,66 @@
+{
+  "Foods": [
+    {
+      "name": "",
+      "Protein": 0,
+      "Carbs": 0,
+      "Fat": 0,
+      "id": 1
+    },
+    {
+      "name": "Banana",
+      "Protein": 1.1,
+      "Carbs": 20.4,
+      "Fat": 0.3,
+      "id": 2
+    },
+    {
+      "name": "Apple",
+      "Protein": 0.1,
+      "Carbs": 3,
+      "Fat": 0,
+      "id": 3
+    },
+    {
+      "name": "",
+      "Protein": 0,
+      "Carbs": 0,
+      "Fat": 0,
+      "id": 4
+    },
+    {
+      "name": "Avocado",
+      "Protein": 2,
+      "Carbs": 1.8,
+      "Fat": 15.4,
+      "id": 5
+    }
+  ],
+  "Exersize": [
+    {
+      "name": "",
+      "Burned": 0,
+      "id": 1
+    },
+    {
+      "name": "Road Biking",
+      "Burned": 167.5,
+      "id": 2
+    },
+    {
+      "name": "Gym",
+      "Burned": 80.9,
+      "id": 3
+    },
+    {
+      "name": "",
+      "Burned": 0,
+      "id": 4
+    },
+    {
+      "name": "Volleyball",
+      "Burned": 86.6,
+      "id": 5
+    }
+  ]
+}

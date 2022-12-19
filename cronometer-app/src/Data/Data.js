@@ -9,3 +9,14 @@ export const habitdes = "Count your calories, ensure you're meeting nutrient tar
 export const nutrition = "Discover your nutrition"
 export const nutritiondes ="Cronometer encourages you to not just count your calories but to focus on your nutrition as a whole."
 
+export const food = [ 
+                     {id:1,name:'Banana',Protein:1.1,Carbs:20.4,Fat:0.3},
+                     {id:2,name:'Apple',Protein:0.1,Carbs:3.0 ,Fat:0.0},
+                     {id:3,name:'Avocado',Protein:2.0,Carbs:1.8,Fat:15.4},
+                     {id:4,name:'Flax Seeds',Protein:18.3,Carbs:1.6,Fat:42.2},
+                    ]
+
+export const exercise = [{id:1,name:"Road Biking",Burned:167.5},
+                        {id:2,name:"Gym",Burned:80.9},
+                        {id:3,name:"Swimming",Burned:57.8},
+                        {id:4,name:"Volleyball",Burned:86.6},]

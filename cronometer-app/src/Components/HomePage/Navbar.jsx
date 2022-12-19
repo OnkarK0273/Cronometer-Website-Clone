@@ -1,4 +1,5 @@
-import { ReactNode } from 'react';
+import Manubar from '../Navbar/Manubar';
+import Darkmode from '../Navbar/Darkmode';
 import {
   Box,
   Flex,
@@ -40,37 +41,7 @@ export default function Navbar() {
             </Stack>
 
             <Stack direction={'row'} spacing={10} border="0px" alignItems={'center'} pl="20px" >
-                <Menu>
-                <MenuButton as={Button} rightIcon={<ChevronDownIcon /> } >
-                    Products
-                </MenuButton>
-
-                <MenuList p='10px' alignItems={'center'} >
-
-                    <MenuItem> <Highlight
-                        query='Basic'
-                        styles={{ px: '3', py: '1', rounded: 'full', bg: 'orange.500' }}
-                    >
-                        Cronometer Basic
-                    </Highlight></MenuItem>
-                    <MenuItem>
-                    <Highlight
-                        query='Gold'
-                        styles={{ px: '3', py: '1', rounded: 'full', bg: 'yellow.400' }}
-                    >
-                        Cronometer Gold
-                    </Highlight></MenuItem>
-                    <MenuItem>
-                    <Highlight
-                        query='Pro'
-                        styles={{ px: '3', py: '1', rounded: 'full', bg: 'green.400' }}
-                    >
-                        Cronometer Pro
-                    </Highlight></MenuItem>
-                    
-                </MenuList>
-
-                </Menu>
+               <Manubar/>
                 <Text alignItems={'center'} fontSize="lg" fontWeight="bold">Support</Text>
                 <Text alignItems={'center'} fontSize="lg" fontWeight="bold">Blog</Text>
                 <Text alignItems={'center'} fontSize="lg" fontWeight="bold">Forums</Text>
@@ -80,12 +51,9 @@ export default function Navbar() {
 
           <Flex alignItems={'center'}>
             <Stack direction={'row'} spacing={7} border="0px" alignItems={'center'} >
-              <Button onClick={toggleColorMode} size="lg">
-                {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
-              </Button>
+              <Darkmode/>
               <Button colorScheme='teal' variant='outline' >
                 <NavLink  to='/Signup'>SignUp</NavLink>
-                
               </Button>
             </Stack>
           </Flex>
