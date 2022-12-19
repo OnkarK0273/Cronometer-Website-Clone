@@ -1,5 +1,5 @@
 import { ChevronDownIcon } from "@chakra-ui/icons";
-import { Button, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
+import { Box, Button, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
 import { useState } from "react";
 import { Post } from "../../Data/Api";
 import { FaAppleAlt } from "react-icons/fa";
@@ -21,12 +21,12 @@ export default function Add({data,postData}) {
         postData(state)
     }
 
-    console.log(state)
+    // console.log("state",state)
 
    
 
   return (
-    <>
+    <Box >
       <Menu>
       <MenuButton as={Button} rightIcon={<FaAppleAlt />}>
         Add Food+
@@ -41,6 +41,6 @@ export default function Add({data,postData}) {
       </Menu>
       
       
-    </>
+    </Box>
   )
 }

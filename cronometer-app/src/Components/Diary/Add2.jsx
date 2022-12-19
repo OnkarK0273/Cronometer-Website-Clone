@@ -31,7 +31,7 @@ export default function Add2({data,postData2}) {
         <MenuList>
            {
             data.map((el)=>{
-                return <MenuItem onClick={()=>{handle(el)}}>{el.name}</MenuItem>
+                return <MenuItem key={el.name} onClick={()=>{handle(el)}}>{el.name}</MenuItem>
             })
            }
         </MenuList>

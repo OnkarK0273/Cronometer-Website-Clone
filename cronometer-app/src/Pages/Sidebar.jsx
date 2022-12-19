@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 import Manuitems from '../Components/Navbar/Manuitems';
 import Darkmode from '../Components/Navbar/Darkmode'
+import { NavLink } from 'react-router-dom';
 import {
   IconButton,
   Avatar,
@@ -45,8 +46,8 @@ interface LinkItemProps {
   icon: IconType;
 }
 const LinkItems: Array<LinkItemProps> = [
-  { name: 'Dashboard', icon: CiGrid42 },
-  { name: 'Diary', icon: FaBook },
+  { name: 'Dashboard', icon: CiGrid42,to:"/Dashboard" },
+  { name: 'Diary', icon: FaBook ,to:"/Diary" },
   { name: 'Trending', icon: FaChartBar },
   { name: 'Foods', icon: FaAppleAlt },
   { name: 'Favourites', icon: FiStar },
@@ -106,7 +107,8 @@ const SidebarContent = ({ onClose, ...rest }) => {
       </Flex>
       <hr />
       {LinkItems.map((link) => (
-        <NavItem key={link.name} icon={link.icon}>
+
+        <NavItem key={link.name} icon={link.icon} to={link.to}>
           {link.name}
         </NavItem>
       ))}
@@ -130,9 +132,9 @@ const SidebarContent = ({ onClose, ...rest }) => {
 };
 
 
-const NavItem = ({ icon, children, ...rest }) => {
+const NavItem = ({ icon, children,to, ...rest }) => {
   return (
-    <Link href="#" style={{ textDecoration: 'none' }} _focus={{ boxShadow: 'none' }}>
+    <Link href={to} style={{ textDecoration: 'none' }} _focus={{ boxShadow: 'none' }}>
       <Flex
         align="center"
         p="4"
